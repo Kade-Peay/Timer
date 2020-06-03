@@ -1,4 +1,4 @@
-import time, sys
+import time, sys, winsound
 
 def countdown(t):
     while t:
@@ -7,6 +7,7 @@ def countdown(t):
         print(timeformat, end='\r', flush=True)
         time.sleep(1)
         t -= 1
+    winsound.Beep(2000, 1000)
     print('Goodbye!\n')
 
 if __name__ == "__main__":
